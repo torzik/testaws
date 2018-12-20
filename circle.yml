@@ -1,0 +1,13 @@
+machine:
+  timezone: 
+      America/New_York
+  php:
+    version:
+      5.6.5
+      
+ evironment:
+  CIRCLE_ENV: test
+    
+test:
+  override:
+    phpunit test
