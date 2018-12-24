@@ -6,12 +6,12 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-   deployment:
+   deploy:
     staging:
       branch: master
       codedeploy:
         appname-1234:
-          application_root: /
+          application_root: /var/www/html
           region: us-east-1
           revision_location:
             revision_type: S3
@@ -24,4 +24,4 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deployment
+      - deploy
